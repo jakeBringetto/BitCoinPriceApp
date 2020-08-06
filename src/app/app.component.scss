@@ -1,0 +1,101 @@
+// @import "~@progress/kendo-theme-default/scss/all"
+.note {
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    font-size: 15px;
+    font-family: monospace;
+    padding: 30px;
+}
+.rat {
+    text-align: center;
+    font-size: 30px;
+    background-color: grey;
+    color: honeydew;
+    opacity: 0.6;
+    width: 50%;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.display {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.a { 
+    width: 100%;
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    justify-content: center;
+    margin: auto;
+    padding: 30px;
+}
+
+.toggle-btn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+
+.flex-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.coor-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: grey;
+}
+
+.b {
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+.bot-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.c {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px; 
+}
+
+.predict-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px;
+}
+
+.d {
+    padding: 30px;
+    background-color: lightgray;
+    font-size: 21px;
+}
+
+.fill {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+}
