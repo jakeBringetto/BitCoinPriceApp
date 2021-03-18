@@ -150,14 +150,6 @@ export class AppComponent {
     let y2 = this.yVars[1];
     let y3 = this.yVars[2];
 
-    // let x1 = 0;
-    // let x2 = 1;
-    // let x3 = 2;
-
-    // //starting y
-    // let y1 = 2;
-    // let y2 = 6;
-    // let y3 = 12;
 
     //determinants
     let d = 0;
