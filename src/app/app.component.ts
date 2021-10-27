@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit, ElementRef, ViewChild } from '@angula
 import { DataService } from './data.service';
 import { Chart } from 'chart.js';
 import { NumberSymbol } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 export class dataGroup {
   xHour: Array<number>;
@@ -26,6 +27,7 @@ export class AppComponent {
   show: boolean = false;
   public style: string = 'normal';
   divSelector: Array<boolean> = [true, false, false];
+  serverData: JSON;
 
   
   xHour = [];
@@ -48,12 +50,14 @@ export class AppComponent {
 
   timePre: number;
   pricePre: number;
+
+  pythonPre: string;
   
  
   
 
   
-  constructor(private _data: DataService) {}
+  constructor(private _data: DataService, private httpClient: HttpClient) {}
 
 
   ngOnInit() {
@@ -203,6 +207,15 @@ export class AppComponent {
     num = (arr[0] * arr[4] * arr[8]) + (arr[1] * arr[5] * arr[6]) + (arr[2] * arr[3] * arr[7]);
     num = num - ((arr[2] * arr[4] * arr[6]) + (arr[0] * arr[5] * arr[7]) + (arr[1] * arr[3] * arr[8]));
     return num;
+  }
+
+  pythonPrediction() {
+    this.httpClient.get('http://127.0.0.1:5000/').subscribe(data => {
+      this.serverData = data as JSON;
+      console.log(this.serverData);
+      this.pythonPre = this.serverData['prediction'];
+      console.log(this.pythonPre)
+    })
   }
 
 }

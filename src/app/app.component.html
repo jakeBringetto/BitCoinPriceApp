@@ -6,7 +6,7 @@
 is from cypto compare, pick three points from actual historical BTC to USD data then hit submit
 to create a parabola, find the min/max, and find the min/max f(x) value.  Hold shift and highlight a section to 
 display a zoomed view.  It works for hours/
-mins/days. Please help if you know a formula for predictions...I'm not an econmist, mereley a math god ;)</p>
+mins/days.</p>
 
 <div class="button-container">
   <button class="toggle-btn" (click)="onClick(2)">Days</button>
@@ -113,4 +113,19 @@ mins/days. Please help if you know a formula for predictions...I'm not an econmi
   <div class="d time">Predicted Time: {{timePre}}</div>
 </div>
 
+<p class="note">Note that the prediction below uses an LSTM neural network.
+  This means that it may take a long time to calculate after hitting submit. 
+  The model uses the last 60 days as testing data to predict the price for the
+  next day. It is trained with 4 years of training data (historical BTC prices).
+</p>
+<div class="predict-container">
+  
+  <button class="c" (click)="pythonPrediction()">submit</button>
+  <div class="d price">Predicted Price: {{pythonPre}}</div>
+</div>
+
+<p class="note">By Jake
+</p>
+
 <div class="fill"></div>
+
